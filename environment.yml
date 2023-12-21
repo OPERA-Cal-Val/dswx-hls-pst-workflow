@@ -1,4 +1,4 @@
-name: dswx_hls
+name: dswx_hls_generation
 channels:
  - conda-forge
 dependencies:

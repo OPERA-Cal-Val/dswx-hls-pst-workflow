@@ -5,6 +5,7 @@ dependencies:
  - python<3.12
  - asf_search
  - boto3
+ - backoff
  - click
  - contextily
  - dateparser

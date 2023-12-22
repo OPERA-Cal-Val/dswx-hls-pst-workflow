@@ -1,7 +1,8 @@
+from pathlib import Path
+
 import geopandas as gpd
 import papermill as pm
 from tqdm import tqdm
-from pathlib import Path
 
 df_val = gpd.read_file('https://raw.githubusercontent.com/OPERA-Cal-Val/DSWx-Requirement-Verification/dev/dswx_verification/data/validation_table.geojson')
 hls_ids = df_val.hls_id
@@ -12,6 +13,7 @@ NB_OUT_DIR.mkdir(exist_ok=True, parents=True)
 
 for aerosol_param in [True, False]:
     for hls_id in tqdm(hls_ids):
+        print(hls_id)
         aero_token = 'on' if aerosol_param else 'off'
         pm.execute_notebook(TEMPLATE_NB,
                             NB_OUT_DIR / f'{hls_id}-aerosol_{aero_token}.ipynb',

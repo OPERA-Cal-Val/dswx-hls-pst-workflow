@@ -47,5 +47,5 @@ dependencies:
  - yamale
  - pip:
    - pystac-client
-   - git+https://github.com/OPERA-Cal-Val/tile-stitcher
+   - tile-mate
    - git+https://github.com/cmarshak/PROTEUS@patch-1

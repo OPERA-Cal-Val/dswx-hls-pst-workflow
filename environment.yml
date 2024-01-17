@@ -15,7 +15,7 @@ dependencies:
  - flake8-blind-except
  - flake8-builtins
  - flake8-import-order
- - gdal
+ - gdal<3.8
  - geopandas
  - h5py
  - hyp3_sdk
